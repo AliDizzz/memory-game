@@ -15,7 +15,12 @@ function afficherTableau() {
     for (let i = 0; i < tabJeu.length; i++) {
         txt += "<div>";
         for (let j = 0; j < tabJeu[i].length; j++) {
-            txt += "<button class='btn btn-primary'>Afficher</button>";
+            if (tabJeu[i][j] === 0) {
+                txt += "<button class='btn btn-primary m-2' style='width:100px;height:100px;'>Afficher</button>";
+            } else {
+                txt += "<img src='image/elephant.png' style='width:100px;height:100px' class='m-2'>";
+            }
+            
         }
         txt += "</div>";
     }
