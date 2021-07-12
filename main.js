@@ -7,6 +7,13 @@ var tabJeu = [
     [0, 0, 0, 0]
 ];
 
+var tabResultat = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+]
+
 afficherTableau();
 
 function afficherTableau() {
@@ -16,7 +23,7 @@ function afficherTableau() {
         txt += "<div>";
         for (let j = 0; j < tabJeu[i].length; j++) {
             if (tabJeu[i][j] === 0) {
-                txt += "<button class='btn btn-primary m-2' style='width:100px;height:100px' onClick='verif(1-2)'>Afficher</button>";
+                txt += "<button class='btn btn-primary m-2' style='width:100px;height:100px' onClick='verif(\""+i+"-"+j+"\")'>Afficher</button>";
             } else {
                 txt += "<img src='"+getImage(tabJeu[i][j])+"' style='width:100px;height:100px' class='m-2'>";
             }
@@ -51,4 +58,11 @@ function getImage(valeur) {
             break;
     }
     return imgTxt;
+}
+
+function verif(bouton) {
+    var ligne = bouton.substr(0, 1);
+    var colonne = bouton.substr(2, 1);
+    tabJeu[ligne][colonne] = tabResultat[ligne][colonne];
+    afficherTableau();
 }
