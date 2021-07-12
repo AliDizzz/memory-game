@@ -16,6 +16,7 @@ var tabResultat = [
 
 var oldSelection = [] ;
 var nbAffiche = 0 ;
+var ready = true ;
 
 afficherTableau();
 
@@ -64,22 +65,33 @@ function getImage(valeur) {
 }
 
 function verif(bouton) {
-    nbAffiche++; // 1er click on ne rentrera pas dans la function ci-dessou, mais au 2eme
+    if (ready) {
+        nbAffiche++; // 1er click on ne rentrera pas dans la function ci-dessou, mais au 2eme
 
     var ligne = bouton.substr(0, 1);
     var colonne = bouton.substr(2, 1);
     tabJeu[ligne][colonne] = tabResultat[ligne][colonne];
     afficherTableau();
 
-    if (nbAffiche > 1) {
-        //verfication
-        if (tabJeu[ligne][colonne] !== tabResultat[oldSelection[0]][oldSelection[1]]) {
-            tabJeu[ligne][colonne] = 0 ;
-            tabJeu[oldSelection[0]][oldSelection[1]] = 0 ;
-        }
+        if (nbAffiche > 1) {
+            ready = false;
 
-        nbAffiche = 0 ;
+            setTimeout(() => {
+                //verfication
+                if (tabJeu[ligne][colonne] !== tabResultat[oldSelection[0]][oldSelection[1]]) {
+                    tabJeu[ligne][colonne] = 0;
+                    tabJeu[oldSelection[0]][oldSelection[1]] = 0;
+                }
+                afficherTableau();
+                ready = true;
+                nbAffiche = 0;
+                oldSelection = [ligne,colonne];
+            }, 1000);
+    } else {
+        oldSelection = [ligne,colonne];
     }
 
-    oldSelection = [ligne,colonne];
+
+    }
+    
 }
