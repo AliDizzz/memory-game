@@ -12,7 +12,9 @@ var tabResultat = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0]
-]
+];
+
+var oldSelection = [] ;
 
 afficherTableau();
 
@@ -65,4 +67,6 @@ function verif(bouton) {
     var colonne = bouton.substr(2, 1);
     tabJeu[ligne][colonne] = tabResultat[ligne][colonne];
     afficherTableau();
+
+    oldSelection = [ligne,colonne];
 }
