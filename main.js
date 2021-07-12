@@ -11,12 +11,12 @@ afficherTableau();
 
 function afficherTableau() {
     var txt = "";
-
+    // i = ma ligne et j = ma colonne
     for (let i = 0; i < tabJeu.length; i++) {
         txt += "<div>";
         for (let j = 0; j < tabJeu[i].length; j++) {
             if (tabJeu[i][j] === 0) {
-                txt += "<button class='btn btn-primary m-2' style='width:100px;height:100px;'>Afficher</button>";
+                txt += "<button class='btn btn-primary m-2' style='width:100px;height:100px' onClick='verif(1-2)'>Afficher</button>";
             } else {
                 txt += "<img src='"+getImage(tabJeu[i][j])+"' style='width:100px;height:100px' class='m-2'>";
             }
@@ -50,5 +50,5 @@ function getImage(valeur) {
         default: console.log("cas non pris en compte");
             break;
     }
-    return 
+    return imgTxt;
 }
