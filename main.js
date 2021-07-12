@@ -7,12 +7,13 @@ var tabJeu = [
     [0, 0, 0, 0]
 ];
 
-var tabResultat = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0]
-];
+// var tabResultat = [
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0]
+// ];
+var tabResultat = genereTableauAleatoire();
 
 var oldSelection = [] ;
 var nbAffiche = 0 ;
@@ -89,9 +90,30 @@ function verif(bouton) {
             }, 1000);
     } else {
         oldSelection = [ligne,colonne];
+        }
+    }
+}
+
+function genereTableauAleatoire() {
+    var tab = [];
+
+    var nbImagePosition = [0, 0, 0, 0, 0, 0, 0, 0];
+
+    for (var i = 0; i < 4; i++) {
+        var ligne = [];
+        for (var j = 0; j < 4; j++) {
+            var fin = false;
+            while (!fin) {
+                var randomImage = Math.floor(Math.random() * 8);
+                if (nbImagePosition[randomImage] < 2) {
+                    ligne.push(randomImage+1);
+                    nbImagePosition[randomImage]++;
+                    fin = true;
+                }
+            }
+        }
+        tab.push(ligne);
     }
 
-
-    }
-    
+    return tab;
 }
