@@ -15,7 +15,7 @@ console.log(puissance4);
  * @returns 
  */
 
-function initialiserTableauVide(nbLigne, nbColonne) {
+function initialiserTableauVide(nbLigne, nbColonne, car = '') {
     var tab = [];
     for (let i = 0; i < nbLigne; i++) {
         const ligne = [];
