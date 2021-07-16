@@ -27,3 +27,10 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
     }
     return tab;
 }
+
+function afficherPuissance4(puissance4) {
+    for (let i = 0; i < puissance4.length; i++) {
+        console.log(puissance4[i]);
+        
+    }
+}
