@@ -4,6 +4,9 @@ var puissance4 = [];
 var nbColonne = 7;
 var nbLigne = 6;
 
+var joueur1car = "x";
+var joueur2car = "o";
+
 puissance4 = initialiserTableauVide(nbLigne, nbColonne, 0);
 console.log(puissance4);
 
@@ -28,9 +31,17 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
     return tab;
 }
 
-function afficherPuissance4(puissance4) {
-    for (let i = 0; i < puissance4.length; i++) {
-        console.log(puissance4[i]);
+function afficherPuissance4(tab) {
+    for (let i = 0; i < tab.length; i++) {
+        const ligne = "";
+        for (let j = 0; j < tab[i].length; j++) {
+            if (tab[i][j] === 0) {
+                ligne += "_";
+            } else if(tab[i][j] === 1) {
+                ligne += "_";
+            }
+            
+        }
         
     }
 }
