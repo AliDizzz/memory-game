@@ -38,10 +38,12 @@ function afficherPuissance4(tab) {
             if (tab[i][j] === 0) {
                 ligne += "_";
             } else if(tab[i][j] === 1) {
-                ligne += "_";
+                ligne += joueur1car;
+            } else if(tab[i][j] === 2) {
+                ligne += joueur2car;
             }
             
         }
-        
+        console.log(ligne);
     }
 }
