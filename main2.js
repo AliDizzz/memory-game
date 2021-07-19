@@ -35,6 +35,7 @@ function afficherPuissance4(tab) {
     for (let i = 0; i < tab.length; i++) {
         const ligne = "";
         for (let j = 0; j < tab[i].length; j++) {
+            ligne += "| ";
             if (tab[i][j] === 0) {
                 ligne += "_";
             } else if(tab[i][j] === 1) {
@@ -42,7 +43,7 @@ function afficherPuissance4(tab) {
             } else if(tab[i][j] === 2) {
                 ligne += joueur2car;
             }
-            
+            ligne += "| ";
         }
         console.log(ligne);
     }
