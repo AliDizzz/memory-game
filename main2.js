@@ -8,7 +8,10 @@ var joueur1car = "x";
 var joueur2car = "o";
 
 puissance4 = initialiserTableauVide(nbLigne, nbColonne, 0);
-console.log(puissance4);
+afficherPuissance4(puissance4, joueur1car, joueur2car);
+puissance4[3][3] = 1;
+puissance4[4][4] = 2;
+afficherPuissance4(puissance4, joueur1car, joueur2car);
 
 /**
  * Permet d'initialiser un tableau de tableau en fonction d'un nombre de ligne et de colonne passé en param
