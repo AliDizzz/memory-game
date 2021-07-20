@@ -24,13 +24,17 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
         const ligne = [];
         for (let j = 0; j < nbColonne; j++) {
             ligne.push(car);
-            
+
         }
         tab.push(ligne);
     }
     return tab;
 }
 
+/**
+ * Permet d'afficher un tableau de puissance 4
+ * @param {array<String>} tab 
+ */
 function afficherPuissance4(tab) {
     for (let i = 0; i < tab.length; i++) {
         const ligne = "";
@@ -38,9 +42,9 @@ function afficherPuissance4(tab) {
             ligne += "| ";
             if (tab[i][j] === 0) {
                 ligne += "_";
-            } else if(tab[i][j] === 1) {
+            } else if (tab[i][j] === 1) {
                 ligne += joueur1car;
-            } else if(tab[i][j] === 2) {
+            } else if (tab[i][j] === 2) {
                 ligne += joueur2car;
             }
             ligne += "| ";
