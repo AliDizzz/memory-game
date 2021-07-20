@@ -35,7 +35,7 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
  * Permet d'afficher un tableau de puissance 4
  * @param {array<String>} tab 
  */
-function afficherPuissance4(tab) {
+function afficherPuissance4(tab, joueur1car, joueur2car) {
     for (let i = 0; i < tab.length; i++) {
         const ligne = "";
         for (let j = 0; j < tab[i].length; j++) {
