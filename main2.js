@@ -35,10 +35,10 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
 }
 
 /**
- * 
- * @param {*} tab 
- * @param {*} j1c 
- * @param {*} j2c 
+ * Permet d'afficher un tableau de puissance 4
+ * @param {Array<String>} tab tableau de car
+ * @param {String} j1c 
+ * @param {String} j2c 
  */
 function afficherPuissance4(tab, j1c, j2c) {
     for (let i = 0; i < tab.length; i++) {
