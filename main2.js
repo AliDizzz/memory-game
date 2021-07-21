@@ -34,6 +34,18 @@ function initialiserTableauVide(nbLigne, nbColonne, car = '') {
     return tab;
 }
 
+/*
+Tant que pasTerminé
+    jouer(J1)
+    jouer(J2)
+Fin Tant Que
+*/
+var pasTermine = false;
+while (!pasTermine) {
+    jouerCase(1);
+    jouerCase(2);
+}
+
 /**
  * Permet d'afficher un tableau de puissance 4
  * @param {Array<String>} tab tableau de car
