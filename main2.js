@@ -42,8 +42,8 @@ Fin Tant Que
 */
 var pasTermine = false;
 while (!pasTermine) {
-    jouerCase(1);
-    jouerCase(2);
+    var aGagneJ1 = jouerCase(1);
+    var aGagneJ2 = jouerCase(2);
 }
 
 /**
