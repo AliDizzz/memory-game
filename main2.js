@@ -46,6 +46,12 @@ while (!pasTermine) {
     var aGagneJ2 = jouerCase(2);
 }
 
+function jouerCase(joueur) {
+    if (joueur === 1) {
+        return true;
+    }
+    return false;
+}
 /**
  * Permet d'afficher un tableau de puissance 4
  * @param {Array<String>} tab tableau de car
