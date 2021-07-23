@@ -44,6 +44,9 @@ var pasTermine = false;
 while (!pasTermine) {
     var aGagneJ1 = jouerCase(1);
     var aGagneJ2 = jouerCase(2);
+    if (aGagneJ1 || aGagneJ2) {
+        pasTermine = true;
+    }
 }
 
 function jouerCase(joueur) {
