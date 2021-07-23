@@ -49,8 +49,9 @@ while (!pasTermine) {
 function jouerCase(joueur) {
     if (joueur === 1) {
         return true;
+    } else {
+        return false;
     }
-    return false;
 }
 /**
  * Permet d'afficher un tableau de puissance 4
