@@ -49,7 +49,10 @@ Fin Tant Que
 
 var pasTermine = false;
 while (!pasTermine) {
-    if (jouerCase(1) || jouerCase(2)) {
+    if (jouerCase(1)){
+        pasTermine = true;
+    }
+    if (!pasTermine && jouerCase(2)) {
         pasTermine = true;
     }
 }
