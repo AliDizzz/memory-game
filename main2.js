@@ -40,6 +40,13 @@ Tant que pasTerminé
     jouer(J2)
 Fin Tant Que
 */
+// var pasTermine = false;
+// while (!pasTermine) {
+//     if (jouerCase(1) || jouerCase(2)) {
+//         pasTermine = true;
+//     }
+// }
+
 var pasTermine = false;
 while (!pasTermine) {
     if (jouerCase(1) || jouerCase(2)) {
