@@ -51,13 +51,16 @@ var pasTermine = false;
 while (!pasTermine) {
     if (jouerCase(1)){
         pasTermine = true;
+        console.log("Joueur 1 à gagné");
     }
     if (!pasTermine && jouerCase(2)) {
         pasTermine = true;
+        console.log("Joueur 2 à gagné");
     }
 }
 
 function jouerCase(joueur) {
+    console.log("Le joueur %d joue", joueur)
     if (joueur === 1) {
         return true;
     } else {
