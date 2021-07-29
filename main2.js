@@ -48,14 +48,14 @@ Fin Tant Que
 // }
 
 
-while (!pasTermine) {
+while (true) {
     if (jouerCase(1)){
-        pasTermine = true;
         console.log("Joueur 1 à gagné");
+        return;
     }
-    if (!pasTermine && jouerCase(2)) {
-        pasTermine = true;
+    if (jouerCase(2)) {
         console.log("Joueur 2 à gagné");
+        return;
     }
 }
 
