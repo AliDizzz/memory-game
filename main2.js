@@ -47,7 +47,7 @@ Fin Tant Que
 //     }
 // }
 
-var pasTermine = false;
+
 while (!pasTermine) {
     if (jouerCase(1)){
         pasTermine = true;
