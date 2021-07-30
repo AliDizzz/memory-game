@@ -3,7 +3,6 @@ console.log("coucou");
 var puissance4 = [];
 var nbColonne = 7;
 var nbLigne = 6;
-
 var joueur1car = "x";
 var joueur2car = "o";
 
@@ -49,7 +48,7 @@ Fin Tant Que
 
 
 while (true) {
-    if (jouerCase(1)){
+    if (jouerCase(1)) {
         console.log("Joueur 1 à gagné");
         return;
     }
